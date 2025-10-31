@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules
+
+# Build output
+/dist
+
+# Firebase
+firebase-debug.log
+.firebase/
+.firebaserc
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/

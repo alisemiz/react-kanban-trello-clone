@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Projesi</title>
+    <!-- CSS dosyamızı bağlıyoruz -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- React'in uygulama yükleyeceği ana div -->
+    <div id="root"></div>
+
+    <!-- === YENİ EKLENDİ (Kart Düzenleme Modalı İskeleti) === -->
+    <!-- Başlangıçta 'modal-gizli' sınıfı ile gizlidir -->
+    <div id="task-modal-overlay" class="modal-gizli">
+      <div id="task-modal-content" class="task-modal">
+        <button id="task-modal-close-btn" class="modal-close-btn">×</button>
+
+        <form id="task-edit-form">
+          <label for="task-modal-title">Kart Başlığı</label>
+          <input type="text" id="task-modal-title" required />
+
+          <label for="task-modal-description">Açıklama</label>
+          <textarea
+            id="task-modal-description"
+            rows="4"
+            placeholder="Kartınız için bir açıklama ekleyin..."
+          ></textarea>
+
+          <button type="submit" class="modal-save-btn">Kaydet</button>
+        </form>
+      </div>
+    </div>
+    <!-- === YENİ EKLENDİ SONU === -->
+
+    <!-- Firebase Kütüphaneleri -->
+    <!-- DEĞİŞİKLİK: Bu script'leri HTML'den siliyoruz. 
+         Vite (npm install) ile kurduğumuz için bunlara gerek yok.
+         Ayrıca app.js'i de 'root' div'ine React ekleyecek 
+         main.jsx dosyasından yüklüyoruz. -->
+
+    <!-- Projemizi başlatan ana JavaScript dosyası (Vite için) -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
